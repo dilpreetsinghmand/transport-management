@@ -1,0 +1,39 @@
+
+Fields:
+road_id: Unique identifier for each road.
+name: Name of the road.
+length: Length of the road in kilometers.
+start_point: GeoJSON point representing the starting point of the road.
+end_point: GeoJSON point representing the ending point of the road.
+Collection: PublicTransitRoutes
+
+Fields:
+route_id: Unique identifier for each public transit route.
+name: Name of the transit route.
+mode: Type of public transit (bus, subway, tram, etc.).
+stops: Array of GeoJSON points representing stops along the route.
+schedule: Timetable for the transit route.
+Collection: TrafficFlow
+
+Fields:
+flow_id: Unique identifier for each traffic flow record.
+road_id: Reference to the road on which the traffic flow is recorded.
+timestamp: Date and time when the traffic flow data was recorded.
+average_speed: Average speed of vehicles on the road at the recorded time.
+vehicle_count: Number of vehicles counted on the road at the recorded time.
+Collection: Incidents
+
+Fields:
+incident_id: Unique identifier for each incident.
+type: Type of incident (accident, construction, etc.).
+location: GeoJSON point representing the location of the incident.
+description: Description of the incident.
+reported_at: Date and time when the incident was reported.
+Collection: Users
+
+Fields:
+user_id: Unique identifier for each user.
+username: Username of the user.
+email: Email address of the user.
+favorites: Array of favorite roads or public transit routes saved by the user.
+settings: Object containing user-specific settings/preferences.
